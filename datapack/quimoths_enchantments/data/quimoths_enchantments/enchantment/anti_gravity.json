@@ -1,0 +1,64 @@
+{
+	"description": "anti gravity",
+	"exclusive_set": "minecraft:feather_falling",
+	"supported_items": "#minecraft:foot_armor",
+	"primary_items": "#minecraft:foot_armor",
+	"weight": 1,
+	"max_level": 3,
+	"min_cost": {
+		"base": 5,
+		"per_level_above_first": 3
+	},
+	"max_cost": {
+		"base": 7,
+		"per_level_above_first": 5
+	},
+	"anvil_cost": 5,
+	"slots": [
+		"feet"
+	],
+	"effects": {
+		"minecraft:attributes": [
+			{
+				"id": "anti_gravity",
+				"attribute": "minecraft:gravity",
+				"amount": {
+					"type": "minecraft:linear",
+					"base": -0.025,
+					"per_level_above_first": -0.0125
+				},
+				"operation": "add_value"
+			},
+			{
+				"id": "anti_gravity",
+				"attribute": "minecraft:safe_fall_distance",
+				"amount": {
+					"type": "minecraft:linear",
+					"base": 25,
+					"per_level_above_first": 10
+				},
+				"operation": "add_value"
+			},
+            {
+				"id": "anti_gravity",
+				"attribute": "minecraft:fall_damage_multiplier",
+				"amount": {
+					"type": "minecraft:linear",
+					"base": -0.1,
+					"per_level_above_first": -0.05
+				},
+				"operation": "add_value"
+			},
+            {
+				"id": "anti_gravity",
+				"attribute": "minecraft:jump_strength",
+				"amount": {
+					"type": "minecraft:linear",
+					"base": 1.5,
+					"per_level_above_first": 0.5
+				},
+				"operation": "add_multiplied_total"
+			}
+		]
+	}
+}

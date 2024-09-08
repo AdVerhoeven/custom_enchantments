@@ -1,0 +1,1 @@
+clear @s minecraft:torch 1
